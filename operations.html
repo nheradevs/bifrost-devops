@@ -23,7 +23,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">
-        <img src="assets/img/logo.svg" width="141" height="41" alt="Bifrost DevOps - Home" data-i18n-attr="alt:nav.home">
+        <img src="assets/img/logo.svg" width="160" height="37" alt="Bifrost DevOps - Home" data-i18n-attr="alt:nav.home">
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
@@ -179,6 +179,7 @@
     <!-- ============ CONTACT FORM (Netlify Forms) ============ -->
     <section class="section container contact" id="contact" aria-labelledby="contact-title">
       <div class="section-head">
+        <p class="demo-note" data-i18n="ops.demo">Demo site: this form does not send data.</p>
         <h2 class="h2" id="contact-title" data-i18n="ops.form.title">Tell us about your team</h2>
         <p class="section-sub" data-i18n="ops.form.sub">We’ll reply within [N] business days. No automated sales sequence, a person will read this.</p>
       </div>
@@ -192,19 +193,19 @@
 
         <div class="field">
           <label class="field-label" for="f-name" data-i18n="ops.f.name">Full name</label>
-          <input class="input" id="f-name" name="name" type="text" required autocomplete="name">
+          <input class="input" id="f-name" name="name" type="text" required autocomplete="name" disabled>
         </div>
         <div class="field">
           <label class="field-label" for="f-email" data-i18n="ops.f.email">Work email</label>
-          <input class="input" id="f-email" name="email" type="email" required autocomplete="email">
+          <input class="input" id="f-email" name="email" type="email" required autocomplete="email" disabled>
         </div>
         <div class="field">
           <label class="field-label" for="f-company" data-i18n="ops.f.company">Company</label>
-          <input class="input" id="f-company" name="company" type="text" required autocomplete="organization">
+          <input class="input" id="f-company" name="company" type="text" required autocomplete="organization" disabled>
         </div>
         <div class="field">
           <label class="field-label" for="f-size" data-i18n="ops.f.size">Team size</label>
-          <select class="input" id="f-size" name="team-size" required>
+          <select class="input" id="f-size" name="team-size" required disabled>
             <option value="" data-i18n="ops.f.choose">Choose one</option>
             <option value="1-10">1-10</option>
             <option value="11-50">11-50</option>
@@ -216,21 +217,21 @@
         <fieldset class="field field-full">
           <legend class="field-label" data-i18n="ops.f.interest">What are you interested in?</legend>
           <div class="checks">
-            <label class="check"><input type="checkbox" name="interest" value="paths"> <span data-i18n="ops.o1.h">Paths by role</span></label>
-            <label class="check"><input type="checkbox" name="interest" value="ctf"> <span data-i18n="ops.o2.h">Private events</span></label>
-            <label class="check"><input type="checkbox" name="interest" value="purple"> <span data-i18n="ops.o3.h">Controlled chaos exercises</span></label>
-            <label class="check"><input type="checkbox" name="interest" value="custom"> <span data-i18n="ops.o4.h">Scenarios based on your stack</span></label>
+            <label class="check"><input type="checkbox" name="interest" disabled value="paths"> <span data-i18n="ops.o1.h">Paths by role</span></label>
+            <label class="check"><input type="checkbox" name="interest" disabled value="ctf"> <span data-i18n="ops.o2.h">Private events</span></label>
+            <label class="check"><input type="checkbox" name="interest" disabled value="purple"> <span data-i18n="ops.o3.h">Controlled chaos exercises</span></label>
+            <label class="check"><input type="checkbox" name="interest" disabled value="custom"> <span data-i18n="ops.o4.h">Scenarios based on your stack</span></label>
           </div>
         </fieldset>
 
         <div class="field field-full">
           <label class="field-label" for="f-msg" data-i18n="ops.f.msg">Anything else we should know?</label>
-          <textarea class="input textarea" id="f-msg" name="message" rows="5"></textarea>
+          <textarea class="input textarea" id="f-msg" name="message" disabled rows="5"></textarea>
           <p class="field-help" data-i18n="ops.f.msgHelp">Optional. Don’t include passwords, internal IPs or other sensitive data.</p>
         </div>
 
         <div class="field-full form-actions">
-          <button class="btn btn-primary" type="submit" data-i18n="ops.f.submit">Send</button>
+          <button class="btn btn-primary" type="submit" data-i18n="ops.f.submit" disabled aria-disabled="true" disabled aria-disabled="true">Send</button>
           <p class="field-help">
             <span data-i18n="ops.f.privacy">We’ll only use this information to reply to you. Read our</span>
             <a class="link-plain" href="privacy.html" data-i18n="br.nl.privacyLink">privacy policy</a>.
@@ -303,6 +304,8 @@
         </nav>
       </div>
       <p class="copyright">© <span data-year>2026</span> Bifrost DevOps. <span data-i18n="f.rights">All rights reserved.</span></p>
+      <p class="credit-line">Site built by Karen Gil · <a href="https://nheradev.com" target="_blank" rel="noopener">nheradev.com</a> · Parte de su portafolio</p>
+      <p class="credit-line demo" data-i18n="f.demo">Portfolio demo page. No data is collected or sent.</p>
     </div>
   </footer>
 </body>

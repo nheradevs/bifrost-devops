@@ -102,6 +102,11 @@ window.BM_I18N = {
     "f.whitepaper": "Whitepaper de seguridad",
     "f.disclosure": "Divulgación de vulnerabilidades",
     "f.rights": "Todos los derechos reservados.",
+    "f.demo": "Página de demostración para portafolio. Ningún dato es recogido ni enviado.",
+    "f.credit": "Sitio hecho por Karen Gil · nheradev.com · Parte de su portafolio",
+    "ct.demo": "Sitio de demostración: este formulario no envía datos.",
+    "ops.demo": "Sitio de demostración: este formulario no envía datos.",
+    "br.demo": "Sitio de demostración: este formulario no envía datos.",
 
     /* ---------- intelligence.html ---------- */
     "intel.meta.title": "Intelligence | Bifrost",

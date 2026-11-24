@@ -332,7 +332,10 @@ hr.divider.container { padding: 0; width: calc(100% - var(--gutter) * 2); max-wi
   font-size: .8rem; color: var(--text-muted); text-decoration: none;
 }
 .footer-cols a:hover { color: var(--white); text-decoration: underline; }
-.copyright { text-align: center; font-size: .8rem; font-weight: 500; color: var(--text); margin-top: 2rem; }
+.credit-line { margin: .4rem 0 0; font-size: .875rem; color: var(--text-muted); }
+  .credit-line.demo { color: var(--bronze); opacity: .85; }
+  .demo-note { color: var(--bronze); font-size: .92rem; margin-bottom: 1.2rem; }
+  .copyright { text-align: center; font-size: .8rem; font-weight: 500; color: var(--text); margin-top: 2rem; }
 
 /* =========================================================
    404
