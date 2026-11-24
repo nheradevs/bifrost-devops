@@ -1,0 +1,92 @@
+# Static site: no build step. Netlify serves the repo root as-is.
+[build]
+  publish = "."
+  # La función importa @netlify/blobs. Sin build command, Netlify no instala las
+  # dependencias y la función falla al arrancar con 'store_unavailable'.
+  # El sitio sigue siendo estático: esto solo instala node_modules.
+  command = "npm install --no-audit --no-fund"
+
+# Auth API: same origin, so the browser keeps using /api/auth/* and nothing needs
+# CORS or a different CSP. The function lives in netlify/functions/auth.mjs.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/auth/:splat"
+  status = 200
+  force = true
+
+# Security headers (it'd be awkward for a security platform to ship without them)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+
+# CSS and JS are the files that change with every deploy, and there is no build
+# step to add a content hash to their names. With max-age=3600 a browser kept the
+# old stylesheet for an hour after a deploy and showed the previous design. They
+# are now revalidated on every load: the ETag makes that a 304 and the change
+# shows up immediately. Fonts never change, so they stay immutable for a year.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/.well-known/security.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+# Platform: never indexed. (Access control must happen server-side; see js/auth.js notes.)
+[[headers]]
+  for = "/app/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+
+# Password reset: these URLs can carry a single-use token, so they get no-referrer
+# (the global policy is strict-origin-when-cross-origin, which still sends the full
+# path to same-origin subresources) and no-store (no shared cache keeps a tokenised
+# page). js/reset-boot.js also strips the token from the address bar on load.
+# Pretty URLs are on, so both the extensionless and the .html form are listed.
+[[headers]]
+  for = "/reset.html"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/reset-password.html"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/reset"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/reset-password"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"

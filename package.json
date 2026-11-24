@@ -1,0 +1,16 @@
+{
+  "name": "bifrost-devops",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bifrost: sitio estático de entrenamiento DevOps + función de autenticación (Netlify). Sin build para el sitio.",
+  "scripts": {
+    "dev": "node server/index.mjs",
+    "test": "node --test tests/"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

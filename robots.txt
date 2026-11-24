@@ -1,4 +1,7 @@
+# TODO before deploy: replace YOUR-DOMAIN
 User-agent: *
-Allow: /
+Disallow: /app/
+Disallow: /thanks.html
+Disallow: /post.html
 
-Sitemap: https://bifrost-devops.pages.dev/sitemap.xml
+Sitemap: https://YOUR-DOMAIN/sitemap.xml

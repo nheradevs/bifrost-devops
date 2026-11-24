@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="gt.meta.title">The Gauntlet - Bifrost DevOps</title>
+  <meta name="description" data-i18n-attr="content:gt.meta.description" content="Ten cybersecurity tracks and three learning paths, from junior to senior. Red, blue, purple and GRC labs with no shortcuts.">
+  <meta name="theme-color" content="#32373b">
+  <meta property="og:title" content="The Gauntlet - Bifrost DevOps">
+  <meta property="og:description" content="Ten pillars. Zero shortcuts.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/space-grotesk-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/filter.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <img src="assets/img/logo.svg" width="141" height="41" alt="Bifrost DevOps - Home" data-i18n-attr="alt:nav.home">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+              data-i18n-attr="aria-label:nav.open" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-i18n-attr="aria-label:nav.label" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="intelligence.html" data-i18n="nav.intelligence">Intelligence</a></li>
+          <li><a href="gauntlet.html" aria-current="page" data-i18n="nav.gauntlet">The Gauntlet</a></li>
+          <li><a href="ctf.html" data-i18n="nav.ctf">CTF</a></li>
+          <li><a href="briefing.html" data-i18n="nav.briefing">Briefing</a></li>
+          <li><a href="operations.html" data-i18n="nav.operations">Operations</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="lang-switch" role="group" data-i18n-attr="aria-label:lang.label" aria-label="Language">
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+          <a class="nav-login" href="login.html" data-i18n="nav.login">Log in</a>
+          <a class="btn btn-primary" href="signup.html" data-i18n="cta.initialize">Initialize Protocol</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero container" aria-labelledby="gauntlet-title">
+      <h1 class="page-title" id="gauntlet-title">
+        <span class="line" data-i18n="gt.h1a">Ten pillars.</span>
+        <span class="line gradient-text" data-i18n="gt.h1b">Zero shortcuts.</span>
+      </h1>
+      <p class="page-lead" data-i18n="gt.lead">Pick a pillar, follow a path, or mix both. Every lab assumes you’ll get stuck, and that you’ll find your way out.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#labs" data-i18n="gt.jump.labs">Browse pillars</a>
+        <a class="btn btn-ghost" href="#paths" data-i18n="gt.jump.paths">See learning paths</a>
+      </div>
+    </section>
+
+    <hr class="divider container">
+
+    <!-- ============ TRACKS CATALOG ============ -->
+    <section class="section container" id="labs" aria-labelledby="labs-title">
+      <div class="section-head">
+        <h2 class="h2" id="labs-title" data-i18n="gt.labs.title">Pillars</h2>
+        <p class="section-sub" data-i18n="gt.labs.sub">Filter by side. Or do not, and try them all.</p>
+      </div>
+
+      <!-- Shown only when JS runs (filter.js removes `hidden`) -->
+      <div class="filters" role="group" data-i18n-attr="aria-label:gt.filter.label" aria-label="Filter pillars by side" hidden>
+        <button type="button" class="chip" data-filter="all" aria-pressed="true" data-i18n="gt.filter.all">All</button>
+        <button type="button" class="chip" data-filter="red" aria-pressed="false">Build</button>
+        <button type="button" class="chip" data-filter="blue" aria-pressed="false">Operate</button>
+        <button type="button" class="chip" data-filter="purple" aria-pressed="false">Both</button>
+        <button type="button" class="chip" data-filter="grc" aria-pressed="false">Cost</button>
+      </div>
+      <p class="sr-only" aria-live="polite" data-filter-status></p>
+
+      <ul class="track-grid">
+        <li class="track-card" data-filter-item data-tags="red">
+          <h3 data-i18n="t1.h">CI/CD Without Theater</h3>
+          <p data-i18n="t1.p">Pipelines that run where they should: fast, reliable and boring. No ten-approval chains nobody reads.</p>
+          <ul class="tags"><li class="tag tag-red">Build</li></ul>
+          <p class="track-meta tbd">[N] labs</p>
+        </li>
+        <li class="track-card" data-filter-item data-tags="red">
+          <h3 data-i18n="t2.h">Infrastructure as Code</h3>
+          <p data-i18n="t2.p">If your infrastructure is not versioned, it does not exist. Terraform with real review and plans that do not surprise anyone.</p>
+          <ul class="tags"><li class="tag tag-red">Build</li></ul>
+          <p class="track-meta tbd">[N] labs</p>
+        </li>
+        <li class="track-card" data-filter-item data-tags="red">
+          <h3 data-i18n="t3.h">Kubernetes Under Fire</h3>
+          <p data-i18n="t3.p">Manifests you still understand in December. Probes, limits and rollbacks that do not require a ritual.</p>
+          <ul class="tags"><li class="tag tag-red">Build</li></ul>
+          <p class="track-meta tbd">[N] labs</p>
+        </li>
+        <li class="track-card" data-filter-item data-tags="red blue">
+          <h3 data-i18n="t4.h">Observability That Answers</h3>
+          <p data-i18n="t4.p">Metrics, logs and traces that reply before your client does. Alerts that do not scream about everything.</p>
+          <ul class="tags"><li class="tag tag-red">Build</li><li class="tag tag-blue">Operate</li></ul>
+          <p class="track-meta tbd">[N] labs</p>
+        </li>
+        <li class="track-card" data-filter-item data-tags="red blue">
+          <h3 data-i18n="t5.h">Friday Deploy Drills</h3>
+          <p data-i18n="t5.p">Feature flags, gradual rollouts and rollback plans that are not a wish. Deploying on Friday stops being a bet.</p>
+          <ul class="tags"><li class="tag tag-red">Build</li><li class="tag tag-blue">Operate</li></ul>
+          <p class="track-meta tbd">[N] labs</p>
+        </li>
+        <li class="track-card" data-filter-item data-tags="blue">
+          <h3 data-i18n="t6.h">Incident Forensics</h3>
+          <p data-i18n="t6.p">Rebuild what happened from incomplete logs and a confusing Slack thread. No invented villains.</p>
+          <ul class="tags"><li class="tag tag-blue">Operate</li></ul>
+          <p class="track-meta tbd">[N] labs</p>
+        </li>
+        <li class="track-card" data-filter-item data-tags="blue">
+          <h3 data-i18n="t7.h">Backups That Restore</h3>
+          <p data-i18n="t7.p">A backup without a restore test is a wish. Automate actually checking it, not just dreaming about it.</p>
+          <ul class="tags"><li class="tag tag-blue">Operate</li></ul>
+          <p class="track-meta tbd">[N] labs</p>
+        </li>
+        <li class="track-card" data-filter-item data-tags="red">
+          <h3 data-i18n="t8.h">Honest Automation</h3>
+          <p data-i18n="t8.p">Automate what truly repeats. Document the rest and keep living. Scripts nobody understands are debt too.</p>
+          <ul class="tags"><li class="tag tag-red">Build</li></ul>
+          <p class="track-meta tbd">[N] labs</p>
+        </li>
+        <li class="track-card" data-filter-item data-tags="grc">
+          <h3 data-i18n="t9.h">Cost and Capacity</h3>
+          <p data-i18n="t9.p">The cloud is not free and autoscaling is not a budget strategy. Read the bill before finance does.</p>
+          <ul class="tags"><li class="tag tag-grc">Cost</li></ul>
+          <p class="track-meta tbd">[N] labs</p>
+        </li>
+        <li class="track-card" data-filter-item data-tags="purple">
+          <h3 data-i18n="t10.h">Controlled Game Days</h3>
+          <p data-i18n="t10.p">We break things on purpose, with permission and an exit plan. Controlled friction builds muscle.</p>
+          <ul class="tags"><li class="tag tag-purple">Both</li></ul>
+          <p class="track-meta tbd">[N] labs</p>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="divider container">
+
+    <!-- ============ LEARNING PATHS ============ -->
+    <section class="section container" id="paths" aria-labelledby="paths-title">
+      <div class="section-head">
+        <h2 class="h2" id="paths-title" data-i18n="gt.paths.title">Learning paths</h2>
+        <p class="section-sub" data-i18n="gt.paths.sub">Three levels. Pick by what you can already do, not by your job title.</p>
+      </div>
+
+      <ol class="paths">
+        <li class="path">
+          <p class="path-level"><span class="step-num" aria-hidden="true">01</span> Junior</p>
+          <h3 data-i18n="gt.l1.h">Survive the first shift</h3>
+          <p data-i18n="gt.l1.p">You know the theory. Now learn to stay calm while an alert keeps firing.</p>
+          <ul class="path-topics">
+            <li data-i18n="gt.l1.t1">Networking and protocols</li>
+            <li data-i18n="gt.l1.t2">Git beyond commit and push</li>
+            <li data-i18n="gt.l1.t3">Containers without magic</li>
+            <li data-i18n="gt.l1.t4">Alert triage</li>
+          </ul>
+          <p class="track-meta tbd">[N] labs · [N] h</p>
+        </li>
+        <li class="path">
+          <p class="path-level"><span class="step-num" aria-hidden="true">02</span> Mid</p>
+          <h3 data-i18n="gt.l2.h">Own the incident</h3>
+          <p data-i18n="gt.l2.p">You can solve labs. Now solve them with noise, pressure and missing context.</p>
+          <ul class="path-topics">
+            <li data-i18n="gt.l2.t1">Real CI/CD pipelines</li>
+            <li data-i18n="gt.l2.t2">Infrastructure as code with review</li>
+            <li data-i18n="gt.l2.t3">Kubernetes in production</li>
+            <li data-i18n="gt.l2.t4">Incident forensics</li>
+          </ul>
+          <p class="track-meta tbd">[N] labs · [N] h</p>
+        </li>
+        <li class="path">
+          <p class="path-level"><span class="step-num" aria-hidden="true">03</span> Senior</p>
+          <h3 data-i18n="gt.l3.h">Lead the response</h3>
+          <p data-i18n="gt.l3.p">You’ve done this before. Now do it faster, quieter, and explain it to whoever signs the checks.</p>
+          <ul class="path-topics">
+            <li data-i18n="gt.l3.t1">Observability and SLOs</li>
+            <li data-i18n="gt.l3.t2">Internal platform automation</li>
+            <li data-i18n="gt.l3.t3">Game days and controlled chaos</li>
+            <li data-i18n="gt.l3.t4">Executive reporting and cloud costs</li>
+          </ul>
+          <p class="track-meta tbd">[N] labs · [N] h</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta container" aria-labelledby="gt-final">
+      <p class="final-text" id="gt-final" data-i18n="gt.final">Ready to get stuck?</p>
+      <div class="final-actions">
+        <a class="btn btn-primary" href="signup.html" data-i18n="cta.initialize">Initialize Protocol</a>
+        <a class="btn btn-ghost" href="intelligence.html" data-i18n="gt.final.how">How missions work</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <hr class="divider">
+      <div class="footer-cols">
+        <nav aria-labelledby="f-company">
+          <h2 class="footer-title" id="f-company" data-i18n="f.company">Company</h2>
+          <ul>
+            <li><a href="about.html" data-i18n="f.about">About</a></li>
+            <li><a href="briefing.html" data-i18n="f.blog">Blog</a></li>
+            <li><a href="contact.html" data-i18n="f.contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-platform">
+          <h2 class="footer-title" id="f-platform" data-i18n="f.platform">Platform</h2>
+          <ul>
+            <li><a href="gauntlet.html#labs" data-i18n="f.labs">Labs</a></li>
+            <li><a href="gauntlet.html#paths" data-i18n="f.paths">Learning Paths</a></li>
+            <li><a href="resources.html" data-i18n="f.resources">Resources</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-legal">
+          <h2 class="footer-title" id="f-legal" data-i18n="f.legal">Legal</h2>
+          <ul>
+            <li><a href="privacy.html" data-i18n="f.privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-i18n="f.terms">Terms of Service</a></li>
+            <li><a href="cookies.html" data-i18n="f.cookies">Cookie Policy</a></li>
+            <li><a href="security.html" data-i18n="f.whitepaper">Security Whitepaper</a></li>
+            <li><a href="disclosure.html" data-i18n="f.disclosure">Vulnerability Disclosure</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="copyright">© <span data-year>2026</span> Bifrost DevOps. <span data-i18n="f.rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+</body>
+</html>

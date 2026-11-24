@@ -1,0 +1,13 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Local dev
+*.log
+node_modules/
+
+# Backend local: base de datos de prueba y correos capturados
+server/.data/

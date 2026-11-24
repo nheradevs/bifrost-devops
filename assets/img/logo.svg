@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="41" viewBox="0 0 150 41" role="img" aria-label="Bifrost">
+  <path d="M8 30 Q24 8 40 30" fill="none" stroke="#f4b860" stroke-width="4" stroke-linecap="round"/>
+  <path d="M46 30 Q62 8 78 30" fill="none" stroke="#c83e4d" stroke-width="4" stroke-linecap="round"/>
+  <text x="86" y="28" font-family="Space Grotesk, system-ui, sans-serif" font-size="20" font-weight="600" letter-spacing="2" fill="#f4d6cc">BIFROST</text>
+</svg>
