@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bifrost entrena DevOps contra entornos reales: pipelines que fallan, clusters con opiniones y backups que se restauran. Sin cajas de arena. Para juniors y seniors, solo o en escuadrón.">
+<meta name="author" content="Karen Gil">
+<meta name="theme-color" content="#32373b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2332373b'/%3E%3Cpath d='M10 44 Q32 18 54 44' fill='none' stroke='%23f4b860' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bifrost DevOps">
+<meta property="og:title" content="Bifrost | Entrenamiento DevOps con entornos reales">
+<meta property="og:description" content="Pipelines que fallan, clusters con opiniones y backups que se restauran. Sin cajas de arena.">
+<meta property="og:url" content="https://bifrost-devops.pages.dev/">
+<meta property="og:image" content="https://bifrost-devops.pages.dev/assets/ops-serverroom.jpg">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bifrost | Entrenamiento DevOps con entornos reales">
+<meta name="twitter:description" content="Pipelines que fallan, clusters con opiniones y backups que se restauran. Sin cajas de arena.">
+<meta name="twitter:image" content="https://bifrost-devops.pages.dev/assets/ops-serverroom.jpg">
+<title>Bifrost | Entrenamiento DevOps con entornos reales</title>
+<link rel="preload" href="fonts/space-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/public-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header id="topbar">
+  <div class="nav container">
+    <a class="brand" href="#top" aria-label="Bifrost, inicio">
+      <svg class="mark" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <path d="M3 19 Q13 5 23 19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="13" cy="10.5" r="2" fill="currentColor"/>
+        <path d="M5 22h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span class="wordmark">BIFROST</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#pilares">Pilares</a></li>
+        <li><a href="#audiencia">Audiencia</a></li>
+        <li><a href="#rituales">Rituales</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#pilares">Pilares</a></li>
+      <li><a href="#audiencia">Audiencia</a></li>
+      <li><a href="#rituales">Rituales</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero container" id="top">
+    <h1 class="reveal">
+      <span class="line">Despliega en viernes.</span>
+      <span class="line">Duerme tranquilo.</span>
+      <span class="line accent">Casi siempre.</span>
+    </h1>
+    <div class="hero-copy reveal">
+      <p>
+        El pager de las 2 AM no es mala suerte: es tu deploy de las 6 PM pidiendo visitas.
+        Aquí entrenas contra entornos reales: pipelines que fallan por caché, clusters con opiniones
+        y monitoreo que miente bonito.
+        <strong class="accent">¿Listo para dejar de desplegar con los ojos cerrados?</strong>
+      </p>
+      <p>
+        En la mitología nórdica, Bifrost es el puente entre mundos. En DevOps, el puente es tu pipeline.
+        Las otras plataformas te dan cajas de arena con botón de pista. Aquí el staging se parece a producción,
+        porque producción no perdona.
+      </p>
+      <p><strong class="accent">Slides bonitos no. Logs. Bienvenido.</strong></p>
+      <div class="hero-actions">
+        <a class="btn" href="#contacto">Empezar a entrenar</a>
+        <a class="link-arrow" href="#pilares">Ver los pilares</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILARES -->
+  <section class="container section" id="pilares">
+    <div class="pilares-intro reveal">
+      <h2>Elige tu veneno</h2>
+      <p class="lead"><span>El pipeline está en rojo.</span> <span>El sprint termina el viernes.</span></p>
+      <p class="question accent">¿Por dónde empiezas?</p>
+    </div>
+    <ul class="pillars reveal">
+      <li><h3>CI/CD sin teatro</h3><p>Pipelines que corren donde deben: ni el clásico "en mi máquina funciona" ni diez aprobaciones que nadie lee.</p></li>
+      <li><h3>Infra como código</h3><p>Si tu infraestructura no está versionada, no existe: es folklore de Slack. Terraform y compañía con revisión de verdad.</p></li>
+      <li><h3>Kubernetes sin rituales</h3><p>Manifiestos que entiendes en diciembre, no solo el día que los copiaste. Menos YAML, más intención.</p></li>
+      <li><h3>Observabilidad</h3><p>Si no lo mides, es una opinión. Métricas, logs y trazas que contestan antes que tu cliente.</p></li>
+      <li><h3>Backups que restauran</h3><p>Un backup sin prueba de restauración es un deseo. Automatizamos comprobarlo, no solo soñarlo.</p></li>
+      <li><h3>On-call humano</h3><p>Rotaciones que no arruinan vidas, runbooks que sirven de madrugada y postmortems sin cacería de culpables.</p></li>
+      <li><h3>DevSecOps</h3><p>Seguridad desde el primer commit, no en el pentesting de diciembre. Shift left, pero con pruebas que lo respalden.</p></li>
+      <li><h3>Automatización honesta</h3><p>Automatizar lo que de verdad se repite. Lo demás: documentarlo y seguir con vida.</p></li>
+    </ul>
+    <p class="stat reveal">80+ labs. Actualizaciones semanales. Sin humo. Con logs.</p>
+    <div class="center reveal"><a class="btn" href="#rituales">Elegir tu batalla</a></div>
+  </section>
+
+  <!-- PHOTO STRIP -->
+  <div class="gallery reveal" aria-hidden="false">
+    <figure><img src="assets/ops-serverroom.jpg" alt="Ingeniera frente a racks de servidores en un centro de datos" loading="lazy"><figcaption>Rack real, no mockup</figcaption></figure>
+    <figure><img src="assets/ops-laptop.jpg" alt="Manos trabajando sobre un portátil, fotografía en blanco y negro" loading="lazy"><figcaption>Turno nocturno</figcaption></figure>
+    <figure><img src="assets/ops-code.jpg" alt="Pantalla de portátil con código de aplicación" loading="lazy"><figcaption>Código bajo presión</figcaption></figure>
+  </div>
+
+  <!-- AUDIENCIA -->
+  <section class="container section" id="audiencia">
+    <h2 class="reveal"><span class="line">De junior a SRE.</span> <span class="line accent">Solo o en escuadrón.</span></h2>
+    <div class="split-copy reveal">
+      <p>¿Junior? Rompe un pipeline sin romper la empresa.</p>
+      <p>¿Senior? Defiende tu arquitectura de alguien que desplegó un viernes sin leer el plan de rollback.</p>
+      <p>
+        Veteranos afilando herramientas oxidadas, curiosos con ganas y sí, los que se "actualizan" en horario laboral.
+        Todos caben.
+        <strong class="accent">No le diremos a tu jefe si tú tampoco.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- RITUALES -->
+  <section class="container section" id="rituales">
+    <header class="section-head reveal">
+      <h2>Elige tu ritual</h2>
+      <p class="muted">Precios próximamente. Los labs no se van a arreglar solos.</p>
+    </header>
+    <div class="plans reveal">
+      <article class="plan">
+        <h3>Aprendiz</h3>
+        <p class="plan-for">Para juniors hartos de tutoriales infinitos.</p>
+        <p class="price"><span class="tbd">[COTIZACIÓN]</span></p>
+        <ul>
+          <li class="tbd">[Acceso a labs guiados]</li>
+          <li class="tbd">[Pipelines de práctica]</li>
+          <li class="tbd">[Comunidad de supervivientes]</li>
+        </ul>
+        <a class="btn ghost" href="#contacto">Avisarme</a>
+      </article>
+      <article class="plan featured">
+        <h3>Ingeniero</h3>
+        <p class="badge">Recomendado</p>
+        <p class="plan-for">Para quienes necesitan producción, no slides.</p>
+        <p class="price"><span class="tbd">[COTIZACIÓN]</span></p>
+        <ul>
+          <li class="tbd">[Escenarios reales de incidentes]</li>
+          <li class="tbd">[Revisión de IaC por pares]</li>
+          <li class="tbd">[Simulaciones de on-call]</li>
+        </ul>
+        <a class="btn" href="#contacto">Empezar a entrenar</a>
+      </article>
+      <article class="plan">
+        <h3>Escuadrón</h3>
+        <p class="plan-for">Para equipos y empresas (B2B).</p>
+        <p class="price"><span class="tbd">[COTIZACIÓN]</span></p>
+        <ul>
+          <li class="tbd">[Entornos a medida]</li>
+          <li class="tbd">[Métricas de progreso por persona]</li>
+          <li class="tbd">[Postmortems coordinados]</li>
+        </ul>
+        <a class="btn ghost" href="#contacto">Hablar con nosotras</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container section" id="faq">
+    <h2 class="reveal">Preguntas frecuentes</h2>
+    <div class="faq reveal">
+      <details open><summary>¿Necesito experiencia previa?</summary><p>Necesitas haber roto algo alguna vez, aunque sea tu propia configuración. Del resto nos encargamos.</p></details>
+      <details><summary>¿Esto es un CTF?</summary><p>No. Aquí se arregla, no se rompe. Bueno, también se rompe, pero con intención y posterior arreglo documentado.</p></details>
+      <details><summary>¿Son entornos reales?</summary><p>Sí: desde un pipeline que truena por caché hasta un cluster que solo quiere verte sufrir. Nada de cajas de arena con botón de pista.</p></details>
+      <details><summary>¿Entregan certificado?</summary><p>Entregamos habilidades. El certificado lo imprime tu impresora si le tienes cariño.</p></details>
+      <details><summary>¿Puedo entrenar desde cualquier lugar?</summary><p>Sí, desde donde tengas internet y café. El caos es remoto friendly.</p></details>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="container section" id="contacto">
+    <h2 class="reveal">Contacto</h2>
+    <p class="demo-note reveal">Sitio de demostración: este formulario no envía datos.</p>
+    <form class="reveal" action="#" method="post">
+      <div><label for="em">Correo</label><input id="em" name="email" type="email" autocomplete="email" disabled></div>
+      <div><label for="nm">Nombre</label><input id="nm" name="name" autocomplete="name" disabled></div>
+      <div><label for="ms">Mensaje</label><textarea id="ms" name="message" rows="5" disabled></textarea></div>
+      <button class="wide" type="button" disabled aria-disabled="true">Enviar mensaje</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <nav aria-label="Empresa">
+        <h2 class="footer-title">Empresa</h2>
+        <ul><li><a href="#">Acerca</a></li><li><a href="#">Blog</a></li><li><a href="#contacto">Contacto</a></li></ul>
+      </nav>
+      <nav aria-label="Plataforma">
+        <h2 class="footer-title">Plataforma</h2>
+        <ul><li><a href="#pilares">Labs</a></li><li><a href="#pilares">Rutas de aprendizaje</a></li><li><a href="#faq">Recursos</a></li></ul>
+      </nav>
+      <nav aria-label="Legal">
+        <h2 class="footer-title">Legal</h2>
+        <ul><li><a href="#">Privacidad</a></li><li><a href="#">Términos</a></li><li><a href="#">Cookies</a></li></ul>
+      </nav>
+    </div>
+    <div class="credit">
+      <p>© 2026 Bifrost. Todos los derechos reservados.</p>
+      <p>Sitio hecho por Karen Gil · <a href="https://nheradev.com" target="_blank" rel="noopener">nheradev.com</a> · Parte de su portafolio</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
