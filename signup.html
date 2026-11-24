@@ -88,12 +88,13 @@
               - autocomplete attributes let password managers work (OWASP: never block them or paste).
               - Errors are generic so nobody can tell whether an email is registered.
             -->
-            <form class="auth-form" method="POST" action="/api/auth/login" novalidate data-auth="login">
+            <p class="demo-note" data-i18n="auth.formDemo">Demo site: this form does not send data.</p>
+          <form class="auth-form" method="POST" action="/api/auth/login" novalidate data-auth="login">
               <div class="field">
                 <label class="auth-label" for="login-email" data-i18n="auth.email">Email address</label>
                 <input class="auth-input" id="login-email" name="email" type="email" required
                        autocomplete="username" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254"
-                       placeholder="hacker@darknet.onion" aria-describedby="login-email-error">
+                       placeholder="hacker@darknet.onion" aria-describedby="login-email-error" disabled disabled >
                 <p class="field-error" id="login-email-error" hidden></p>
               </div>
 
@@ -101,7 +102,7 @@
                 <label class="auth-label" for="login-password" data-i18n="auth.password">Password</label>
                 <div class="pw">
                   <input class="auth-input" id="login-password" name="password" type="password" required
-                         autocomplete="current-password" maxlength="128" aria-describedby="login-password-error login-caps">
+                         autocomplete="current-password" maxlength="128" aria-describedby="login-password-error login-caps" disabled disabled >
                   <button class="pw-toggle" type="button" aria-controls="login-password" aria-pressed="false"
                           data-i18n-attr="aria-label:auth.show" aria-label="Show password">
                     <svg class="icon-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -119,7 +120,7 @@
 
               <p class="auth-status" role="status" aria-live="polite" data-status hidden></p>
 
-              <button class="btn btn-primary btn-block" type="submit" data-submit data-i18n="auth.access">Access</button>
+              <button class="btn btn-primary btn-block" type="submit" data-submit data-i18n="auth.access" disabled aria-disabled="true">Access</button>
 
               <p class="auth-alt">
                 <span data-i18n="auth.trouble">Having trouble logging in?</span>
@@ -153,7 +154,7 @@
                 <label class="auth-label" for="signup-email" data-i18n="auth.email">Email address</label>
                 <input class="auth-input" id="signup-email" name="email" type="email" required
                        autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254"
-                       placeholder="cyberninja@proton.me" aria-describedby="signup-email-error">
+                       placeholder="cyberninja@proton.me" aria-describedby="signup-email-error" disabled disabled >
                 <p class="field-error" id="signup-email-error" hidden></p>
               </div>
 
@@ -163,7 +164,7 @@
                   <input class="auth-input" id="signup-password" name="password" type="password" required
                          autocomplete="new-password" minlength="12" maxlength="128" data-strength
                          data-i18n-attr="placeholder:auth.pw.placeholder" placeholder="A passphrase, not a word. Make it hurt."
-                         aria-describedby="signup-password-hint signup-password-error signup-caps">
+                         aria-describedby="signup-password-hint signup-password-error signup-caps" disabled disabled >
                   <button class="pw-toggle" type="button" aria-controls="signup-password" aria-pressed="false"
                           data-i18n-attr="aria-label:auth.show" aria-label="Show password">
                     <svg class="icon-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>

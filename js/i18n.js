@@ -599,6 +599,7 @@ window.BM_I18N = {
     "auth.ok.register": "Si este correo se puede usar, te enviamos un enlace de confirmación. Revisa tu bandeja de entrada.",
     "auth.ok.reset": "Si hay una cuenta con ese correo, te enviamos un enlace para restablecer la contraseña.",
     "auth.ok.magic": "Si hay una cuenta con ese correo, te enviamos un enlace mágico.",
+    "auth.formDemo": "Sitio de demostración: este formulario no envía datos.",
     "auth.demo": "Modo demo: el backend de autenticación todavía no está conectado, así que no se envió nada.",
     "auth.l.kicker": "Operador de regreso",
     "auth.l.h": "Bienvenido de vuelta.",
