@@ -104,7 +104,7 @@ window.BM_I18N = {
     "f.rights": "Todos los derechos reservados.",
     "f.demo": "Página de demostración para portafolio. Ningún dato es recogido ni enviado.",
     "f.credit1": "Sitio hecho por Karen Gil",
-    "f.credit2": "Parte de su portafolio",
+    "f.credit2": "Parte de mi portafolio",
     "f.credit": "Sitio hecho por Karen Gil · nheradev.com · Parte de su portafolio",
     "ct.demo": "Sitio de demostración: este formulario no envía datos.",
     "ops.demo": "Sitio de demostración: este formulario no envía datos.",
