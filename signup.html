@@ -89,7 +89,7 @@
               - Errors are generic so nobody can tell whether an email is registered.
             -->
             <p class="demo-note" data-i18n="auth.formDemo">Demo site: this form does not send data.</p>
-          <form class="auth-form" method="POST" action="/api/auth/login" novalidate data-auth="login">
+            <form class="auth-form method="POST" action="/api/auth/login" novalidate data-auth="login">
               <div class="field">
                 <label class="auth-label" for="login-email" data-i18n="auth.email">Email address</label>
                 <input class="auth-input" id="login-email" name="email" type="email" required
@@ -146,7 +146,8 @@
               No "confirm password" field: the show/hide toggle covers typos (NIST SP 800-63B / OWASP),
               and every extra field is friction. The email confirmation link covers the rest.
             -->
-            <form class="auth-form" method="POST" action="/api/auth/register" novalidate data-auth="register">
+            <p class="demo-note" data-i18n="auth.formDemo">Demo site: this form does not send data.</p>
+            <form class="auth-form method="POST" action="/api/auth/register" novalidate data-auth="register">
               <!-- Plan chosen on the pricing section (?plan=operator). auth.js only accepts known values. -->
               <input type="hidden" name="plan" value="" data-plan>
 

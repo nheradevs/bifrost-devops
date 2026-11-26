@@ -19,7 +19,7 @@ window.BM_I18N = {
     "nav.label": "Principal",
     "lang.label": "Idioma",
 
-    "cta.initialize": "Empezar a entrenar",
+    "cta.initialize": "Empezar",
     "cta.fight": "Elegir tu batalla",
     "cta.hack": "A romper cosas (con permiso)",
 
