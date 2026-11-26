@@ -74,6 +74,7 @@ window.BM_I18N = {
 
     "price.title": "Elige tu ritual",
     "price.sub": "Los precios se anuncian pronto. Los labs no se van a arreglar solos.",
+    "price.demo": "Portafolio de demostración: los planes y precios no están activos.",
     "price.notify": "Avisarme",
     "price.talk": "Contáctanos",
     "plan1.name": "Aprendiz",

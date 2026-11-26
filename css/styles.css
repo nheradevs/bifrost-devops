@@ -120,6 +120,7 @@ hr.divider.container { padding: 0; width: calc(100% - var(--gutter) * 2); max-wi
 .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
 .btn-ghost { background: transparent; color: var(--heading); border-color: var(--line); }
 .btn-ghost:hover { border-color: var(--lavender); color: var(--white); }
+.btn[disabled], .btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
 
 .link-arrow {
   color: var(--lavender); font-weight: 500; text-decoration: none;
