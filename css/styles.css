@@ -195,6 +195,8 @@ hr.divider.container { padding: 0; width: calc(100% - var(--gutter) * 2); max-wi
   .nav-list a { border: 0; min-height: 44px; font-size: .75rem; color: var(--text); }
   .nav-actions { margin-top: 0; flex-wrap: nowrap; align-items: center; }
   .site-nav .nav-actions { flex-direction: row; }
+  .nav-login-row { gap: 1.75rem; }
+  .nav-login { margin-inline-end: .5rem; }
   .site-nav .nav-actions .btn { width: auto; }
   .header-inner > .lang-switch { order: 3; margin-left: 0; }
 }
