@@ -139,6 +139,7 @@ hr.divider.container { padding: 0; width: calc(100% - var(--gutter) * 2); max-wi
   border-bottom: 1px solid var(--line);
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: var(--header-h); gap: 1rem; }
+.header-inner > .lang-switch { margin-left: auto; }
 
 .logo { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--white); }
 .logo img { display: block; width: auto; height: 41px; }
@@ -190,6 +191,7 @@ hr.divider.container { padding: 0; width: calc(100% - var(--gutter) * 2); max-wi
   .nav-list { display: flex; gap: 1.75rem; margin-inline: auto; }
   .nav-list a { border: 0; min-height: 44px; font-size: .75rem; color: var(--text); }
   .nav-actions { margin-top: 0; flex-wrap: nowrap; }
+  .header-inner > .lang-switch { order: 3; margin-left: 0; }
 }
 
 /* =========================================================
